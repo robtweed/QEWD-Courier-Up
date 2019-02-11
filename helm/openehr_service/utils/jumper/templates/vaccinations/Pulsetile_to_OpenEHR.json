@@ -1,0 +1,26 @@
+{
+  "composer": {
+    "value": "{{author}}"
+  },
+  "host": "{{source}}",
+  "patientId": "{{patientId}}",
+  "date_created": "=> getDateCreated(dateCreated, source)",
+  "uid": "{{sourceId}}",
+  "immunisation_procedure": {
+    "immunisation_name": {
+      "value": "{{vaccinationName}}"
+    },
+    "comment": {
+      "value": "{{comment}}"
+    },
+    "series_number": {
+      "value": "=> toInteger(series)"
+    },
+    "time": {
+      "value": "=> rippleDateTime(vaccinationDateTime,false)"
+    },
+    "ism_transition": {
+      "value": "532"
+    }
+  }
+}

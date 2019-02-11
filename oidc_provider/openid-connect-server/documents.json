@@ -1,0 +1,90 @@
+{
+  "OpenId": {
+    "Access": {
+      "by_email": {
+        "rob.tweed@gmail.com": 1
+      },
+      "by_id": {
+        "1": {
+          "createdAt": "2019-02-07T16:43:41.095Z",
+          "createdBy": 1,
+          "email": "rob.tweed@gmail.com",
+          "id": 1,
+          "mobileNo": 77875673521,
+          "name": "Robert Tweed",
+          "password": "$2b$10$e5WKLSAIJz.7Xl05bDP5HOVUXGhLIbf7UlHqqEkLKhHTGrFz.Z2RO",
+          "updatedAt": "2019-02-07T16:43:41.095Z",
+          "updatedBy": 1,
+          "userType": "admin",
+          "verified": true
+        }
+      },
+      "next_id": 1
+    },
+    "Claims": {
+      "by_id": {
+        "1": {
+          "fields": [
+            "email",
+            "nhsNumber",
+            "firstName",
+            "lastName",
+            "mobileNumber",
+            "dob",
+            "vouchedBy"
+          ],
+          "name": "openid"
+        }
+      },
+      "by_name": {
+        "openid": 1
+      },
+      "next_id": 1
+    },
+    "Clients": {
+      "by_client_id": {
+        "foo": 1
+      },
+      "by_id": {
+        "1": {
+          "client_id": "foo",
+          "client_secret": "bar",
+          "post_logout_uri_path": "",
+          "redirect_uri_path": "/api/auth/token"
+        }
+      },
+      "next_id": 1
+    },
+    "Users": {
+      "by_email": {
+        "rob.tweed@gmail.com": 1
+      },
+      "by_hcp": {
+        "1": {
+          "1": 1
+        }
+      },
+      "by_id": {
+        "1": {
+          "createdAt": "2019-02-07T16:44:22.124Z",
+          "createdBy": 1,
+          "dob": "06/13/1955",
+          "email": "rob.tweed@gmail.com",
+          "firstName": "Robert",
+          "hcp_id": 1,
+          "lastName": "Tweed",
+          "mobileNumber": "+779017 876",
+          "nhsNumber": 9999999801,
+          "password": "$2b$10$qFEQuy2gZBz.axkPavaI1OeEYf0mZP7CIlnx.1Lhm5tSQLcERFvAi",
+          "updatedAt": "2019-02-07T16:44:22.124Z",
+          "updatedBy": 1,
+          "verified": true
+        }
+      },
+      "by_nhsNumber": {
+        "9999999801": 1
+      },
+      "next_id": 1
+    }
+  }
+}

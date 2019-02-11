@@ -1,0 +1,9 @@
+{
+  "managementPassword": "oidc",
+  "serverName": "QEWD OpenId-Connect Server",
+  "port": 8080,
+  "poolSize": 2,
+  "moduleMap": {
+    "oidc-admin": "/opt/qewd/mapped/modules/qewd-oidc-admin"
+  }
+}

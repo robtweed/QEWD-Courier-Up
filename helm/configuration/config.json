@@ -1,0 +1,32 @@
+{
+  "qewd_up": true,
+  "orchestrator": {
+    "qewd": {
+      "serverName": "Helm Orchestrator",
+      "poolSize": 4
+    }
+  },
+  "microservices": [
+    {
+      "name": "auth_service",
+      "qewd": {
+        "serverName": "Authentication MicroService",
+        "poolSize": 4
+      }
+    },
+    {
+      "name": "openehr_service",
+      "qewd": {
+        "serverName": "OpenEHR MicroService",
+        "poolSize": 4
+      }
+    },
+    {
+      "name": "discovery_service",
+      "qewd": {
+        "serverName": "Discovery MicroService",
+        "poolSize": 4
+      }
+    }
+  ]
+}

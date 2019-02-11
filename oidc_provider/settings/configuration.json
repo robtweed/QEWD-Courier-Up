@@ -1,0 +1,34 @@
+{
+  "phr": {
+    "microservices": {
+      "conductor": {
+        "host": "http://mango-cookie.ripple.foundation",
+        "port": 8080
+      },
+      "openid_connect": {
+        "host": "http://mango-cookie.ripple.foundation",
+        "port": 8000,
+        "path_prefix": "/oidc"
+      }
+    }
+  },
+  "use2FA": false,
+  "twilio": {
+    "accountSid": "xxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "authToken": "yyyyyyyyyyyyyyyyyyyyyyyyyy",
+    "telNo": "+447449000000"
+  },
+  "email_server": {
+    "host": "smtp.eu.mailgun.org",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "postmaster@mail.myhelm.org",
+      "pass": "xxxxxxxxxxxxxxx"
+    }
+  },
+  "user_verify_email": {
+    "from": "\"Helm: Information Only\" <no_reply@example.com>",
+    "subject": "Please verify your email address"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "oidc_client": {
+    "hosts": {
+      "oidc_server": "http://mango-cookie.ripple.foundation:8000",
+      "orchestrator": "http://mango-cookie.ripple.foundation:8080"
+    },
+    "type": "OpenID Connect",
+    "client_id": "foo",
+    "client_secret": "bar",
+    "scope": {
+      "login": "openid"
+    },
+    "urls": {
+      "oidc_server": {
+        "issuer": "/openid",
+        "authorization_endpoint": "/openid/auth",
+        "token_endpoint": "/openid/token",
+        "userinfo_endpoint": "/openid/me",
+        "introspection_endpoint": "/openid/token/introspect",
+        "jwks_endpoint": "/openid/certs",
+        "end_session_endpoint": "/openid/session/end"
+      },
+      "orchestrator": {
+        "callback_url": "/api/auth/token",
+        "post_logout_redirect_uri": "/"
+      }
+    },
+    "index_url": "/index.html",
+    "cookie_name": "JSESSIONID",
+    "logout_approach": "client"
+  },
+  "DDS": {
+    "auth": {
+      "host": "https://devauth.discoverydataservice.net",
+      "path": "/auth/realms/endeavour/protocol/openid-connect/token",
+      "username": "xxxxxxxx",
+      "password": "yyyyyyyyyyy",
+      "client_id": "eds-data-checker",
+      "grant_type": "password"
+    },
+    "api": {
+      "host": "https://devgateway.discoverydataservice.net/data-assurance",
+      "paths": {
+        "getPatientsByNHSNumber": "/api/fhir/patients",
+        "getPatientResources": "/api/fhir/resources",
+        "getResource": "/api/fhir/reference"
+      }
+    }
+  },
+  "openehr": {
+    "servers": {
+      "ethercis": {
+        "url": "http://46.101.81.30:8080",
+        "username": "xxxxxxx",
+        "password": "yyyyyyyy",
+        "platform": "ethercis"
+      }
+    },
+    "defaultPostHost": "ethercis",
+    "synopsis": {
+      "headings": [
+        "allergies",
+        "medications",
+        "problems",
+        "vaccinations",
+        "top3Things"
+      ],
+      "maximum": 4
+    },
+    "paths": {
+      "jumper_templates": "/opt/qewd/mapped/openehr_service/utils/jumper/templates/",
+      "openEHR_modules": "/opt/qewd/mapped/openehr_service/utils/openehr/"
+    },
+    "headings": {
+      "allergies": {
+        "template": {
+          "name": "IDCR - Adverse Reaction List.v1"
+        },
+        "fhir": {
+          "name": "AllergyIntolerance"
+        },
+        "synopsisField": "cause",
+        "summaryTableFields": ["cause", "reaction", "dateCreated"]
+      },
+      "contacts": {
+        "template": {
+          "name": "IDCR - Relevant contacts.v0"
+        },
+        "synopsisField": "name",
+        "summaryTableFields": ["name", "relationship", "nextOfKin"]
+      },
+      "counts": true,
+      "eolcareplans": true,
+      "events": true,
+      "laborders": true,
+      "labresults": true,
+      "medications": {
+        "template": {
+          "name": "IDCR - Medication Statement List.v0"
+        },
+        "synopsisField": "name",
+        "summaryTableFields": ["name", "doseAmount", "dateCreated"]
+      },
+      "mdtreports": true,
+      "personalnotes": true,
+      "problems": {
+        "template": {
+          "name": "IDCR - Problem List.v1"
+        },
+        "fhir": {
+          "name": "Condition"
+        },
+        "synopsisField": "problem",
+        "summaryTableFields": ["problem", "dateOfOnset"]
+      },
+      "procedures": true,
+      "proms": {
+        "template": {
+          "name": "Ripple Generic PROMS.v0"
+        },
+        "synopsisField": "name",
+        "summaryTableFields": ["name", "score", "dateCreated"]
+      },
+      "referrals": true,
+      "top3Things": false,
+      "vaccinations": {
+        "template": {
+          "name": "IDCR - Immunisation summary.v0"
+        },
+        "synopsisField": "vaccinationName",
+        "summaryTableFields": ["vaccinationName", "dateCreated"]
+      },
+      "vitalsigns": true
+    },
+    "documentNames": {
+      "jumperTemplateFields": "OpenEHRJumper"
+    }
+  }
+}

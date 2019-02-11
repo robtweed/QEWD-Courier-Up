@@ -1,0 +1,329 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "IDCR - Problem List.v1",
+  "description": "Data Entry Schema for OpenEHR Template IDCR - Problem List.v1",
+  "type": "object",
+  "properties": {
+    "problems_and_issues": {
+      "type": "object",
+      "properties": {
+        "problem_diagnosis": {
+          "type": "object",
+          "properties": {
+            "last_updated": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Last updated value",
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "date-time"
+                }
+              }
+            },
+            "problem_diagnosis_name": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Problem/Diagnosis name value",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "code": {
+                  "description": "Problem/Diagnosis name code",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "terminology": {
+                  "description": "Problem/Diagnosis name terminology",
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "date_time_clinically_recognised": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Date/time clinically recognised value",
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "date-time"
+                }
+              }
+            },
+            "comment": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Comment value",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "code": {
+                  "description": "Comment code",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "terminology": {
+                  "description": "Comment terminology",
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "severity": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Severity value",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "code": {
+                  "description": "Severity code",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "terminology": {
+                  "description": "Severity terminology",
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "date_time_of_onset": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Date/time of onset value",
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "date-time"
+                }
+              }
+            },
+            "body_site": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Body site value",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "code": {
+                  "description": "Body site code",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "terminology": {
+                  "description": "Body site terminology",
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "diagnostic_certainty": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Diagnostic certainty value",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "code": {
+                  "description": "Diagnostic certainty code",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "terminology": {
+                  "description": "Diagnostic certainty terminology",
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "date_time_of_resolution": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Date/time of resolution value",
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "problem_diagnosis_status": {
+              "type": "object",
+              "properties": {
+                "diagnostic_status": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "description": "Diagnostic status value",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "description": "Diagnostic status code",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "terminology": {
+                      "description": "Diagnostic status terminology",
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "active_inactive": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "description": "Active/Inactive? value",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "description": "Active/Inactive? code",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "terminology": {
+                      "description": "Active/Inactive? terminology",
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "episodicity": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "description": "Episodicity value",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "description": "Episodicity code",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "terminology": {
+                      "description": "Episodicity terminology",
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "resolution_status": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "description": "Resolution status value",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "description": "Resolution status code",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "terminology": {
+                      "description": "Resolution status terminology",
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "drg_category": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "description": "DRG category value",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "description": "DRG category code",
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "terminology": {
+                      "description": "DRG category terminology",
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "first_occurrence": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "description": "First occurrence? value",
+                      "type": "boolean",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            },
+            "clinical_description": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "description": "Clinical description value",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "code": {
+                  "description": "Clinical description code",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "terminology": {
+                  "description": "Clinical description terminology",
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "category": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Category value",
+          "type": "string",
+          "minLength": 1
+        },
+        "code": {
+          "description": "Category code",
+          "type": "string",
+          "minLength": 1
+        },
+        "terminology": {
+          "description": "Category terminology",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "territory": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Territory value",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "uri": "/api/initialise",
+    "method": "GET",
+    "handler": "initialise",
+    "on_microservice": "auth_service",
+    "authenticate": false
+  },
+  {
+    "uri": "/api/auth/token",
+    "method": "GET",
+    "handler": "oidc_callback",
+    "on_microservice": "auth_service",
+    "authenticate": false
+  },
+  {
+    "uri": "/api/openehr/check",
+    "method": "GET",
+    "handler": "ddsUpdateCheck",
+    "on_microservice": "openehr_service"
+  },
+  {
+    "uri": "/api/discovery/:patientId/:heading",
+    "method": "GET",
+    "handler": "getDiscoveryPatientHeading",
+    "on_microservice": "discovery_service",
+    "from_microservices": [
+      "openehr_service"
+    ]
+  },
+  {
+    "uri": "/discovery/merge/:heading",
+    "method": "GET",
+    "handler": "mergeDDSHeading",
+    "on_microservice": "openehr_service",
+    "from_microservices": [
+      "openehr_service"
+    ]
+  },
+  {
+    "uri": "/api/demographics/:patientId",
+    "method": "GET",
+    "handler": "getPatientDemographics",
+    "on_microservice": "discovery_service",
+    "from_microservices": [
+      "orchestrator",
+      "openehr_service"
+    ]
+  },
+  {
+    "uri": "/api/user",
+    "method": "GET",
+    "handler": "getUser",
+    "on_microservice": "auth_service"
+  },
+  {
+    "uri": "/api/application",
+    "method": "GET",
+    "handler": "getApplication"
+  },
+  {
+    "uri": "/api/feeds",
+    "method": "GET",
+    "handler": "getFeeds",
+    "on_microservice": "openehr_service"
+  },
+  {
+    "uri": "/api/patients/:patientId/synopsis/:heading",
+    "method": "GET",
+    "handler": "getPatientHeadingSynopsis",
+    "on_microservice": "openehr_service"
+  },
+  {
+    "uri": "/api/patients/:patientId/top3Things",
+    "method": "GET",
+    "handler": "getPatientTop3ThingsSummary",
+    "on_microservice": "openehr_service"
+  },
+  {
+    "uri": "/api/patients/:patientId/:heading",
+    "method": "GET",
+    "handler": "getPatientHeadingSummary",
+    "on_microservice": "openehr_service"
+  },
+  {
+    "uri": "/api/patients/:patientId/:heading/:sourceId",
+    "method": "GET",
+    "handler": "getPatientHeadingDetail",
+    "on_microservice": "openehr_service"
+  }
+]

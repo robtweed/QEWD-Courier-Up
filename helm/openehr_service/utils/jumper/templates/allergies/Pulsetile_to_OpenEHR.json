@@ -1,0 +1,24 @@
+{
+  "allergies_and_adverse_reactions": {
+    "adverse_reaction_risk": {
+      "causative_agent": {
+        "value": "{{cause}}",
+        "code": "{{causeCode}}",
+        "terminology": "{{causeTerminology}}"
+      },
+      "reaction_details": {
+        "manifestation": {
+          "code": "=> either(terminologyCode, <!delete>)",
+          "value": "{{reaction}}"
+        }
+      }
+    }
+  },
+  "composer": {
+    "value": "{{author}}"
+  },
+  "host": "{{source}}",
+  "uid": "{{sourceId}}",
+  "date_created": "=> getDateCreated(dateCreated, source)",
+  "patientId": "{{patientId}}"
+}

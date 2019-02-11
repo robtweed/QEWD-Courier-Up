@@ -1,0 +1,10 @@
+[
+  "oidc-provider",
+  "bcrypt",
+  "email-validator",
+  "randomstring",
+  "nodemailer",
+  "mustache",
+  "twilio",
+  "zxcvbn"
+]

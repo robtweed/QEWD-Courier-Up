@@ -1,0 +1,84 @@
+{
+  "uid": "{{uid}}",
+  "composer": {
+    "value": "{{composer}}"
+  },
+  "host": "{{host}}",
+  "patientId": "{{patientId}}",
+  "problems_and_issues": {
+    "problem_diagnosis": {
+      "last_updated": {
+        "value": "{{last_updated}}"
+      },
+      "problem_diagnosis_name": {
+        "value": "{{problem_diagnosis_name}}",
+        "code": "{{problem_diagnosis_name_codeString}}",
+        "terminology": "{{problem_diagnosis_name_terminology}}"
+      },
+      "date_time_clinically_recognised": {
+        "value": "{{date_time_clinically_recognised}}"
+      },
+      "comment": {
+        "value": "{{comment}}",
+        "code": "{{comment_codeString}}",
+        "terminology": "{{comment_terminology}}"
+      },
+      "severity": {
+        "value": "{{severity}}",
+        "code": "{{severity_codeString}}",
+        "terminology": "{{severity_terminology}}"
+      },
+      "date_time_of_onset": {
+        "value": "{{date_time_of_onset}}"
+      },
+      "body_site": {
+        "value": "{{body_site}}",
+        "code": "{{body_site_codeString}}",
+        "terminology": "{{body_site_terminology}}"
+      },
+      "diagnostic_certainty": {
+        "value": "{{diagnostic_certainty}}",
+        "code": "{{diagnostic_certainty_codeString}}",
+        "terminology": "{{diagnostic_certainty_terminology}}"
+      },
+      "date_time_of_resolution": {
+        "value": "{{date_time_of_resolution}}"
+      },
+      "problem_diagnosis_status": {
+        "diagnostic_status": {
+          "value": "{{diagnostic_status}}",
+          "code": "{{diagnostic_status_codeString}}",
+          "terminology": "{{diagnostic_status_terminology}}"
+        },
+        "active_inactive": {
+          "value": "{{active_inactive}}",
+          "code": "{{active_inactive_codeString}}",
+          "terminology": "{{active_inactive_terminology}}"
+        },
+        "episodicity": {
+          "value": "{{episodicity}}",
+          "code": "{{episodicity_codeString}}",
+          "terminology": "{{episodicity_terminology}}"
+        },
+        "resolution_status": {
+          "value": "{{resolution_status}}",
+          "code": "{{resolution_status_codeString}}",
+          "terminology": "{{resolution_status_terminology}}"
+        },
+        "drg_category": {
+          "value": "{{drg_category}}",
+          "code": "{{drg_category_codeString}}",
+          "terminology": "{{drg_category_terminology}}"
+        },
+        "first_occurrence": {
+          "value": "{{first_occurrence}}"
+        }
+      },
+      "clinical_description": {
+        "value": "{{clinical_description}}",
+        "code": "{{clinical_description_codeString}}",
+        "terminology": "{{clinical_description_terminology}}"
+      }
+    }
+  }
+}

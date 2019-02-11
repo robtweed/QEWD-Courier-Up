@@ -1,0 +1,23 @@
+{
+  "problems_and_issues": {
+    "problem_diagnosis": {
+      "problem_diagnosis_name": {
+        "value": "{{problem}}",
+        "code": "{{code}}",
+        "terminology": "{{terminology}}"
+      },
+      "date_time_of_onset": {
+        "value": "=> rippleDateTime(dateOfOnset,false)"
+      },
+      "clinical_description": {
+        "value": "{{description}}"
+      }
+    }
+  },
+  "composer": {
+    "value": "{{author}}"
+  },
+  "host": "{{source}}",
+  "uid": "{{sourceId}}",
+  "patientId": "{{patientId}}"
+}
