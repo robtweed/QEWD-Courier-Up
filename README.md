@@ -107,7 +107,7 @@ You'll see three main folders:
 **Note:** replace *-it* with *-d* to run it as a background daemon process.
 
 
-** OIDC Provider / Server
+## OIDC Provider / Server
 
         sudo docker run -it --rm --name oidc -p 8000:8080 -v ~/qewd-courier/oidc_provider/openid-connect-server:/opt/qewd/mapped -v ~/qewd-courier/oidc_provider/openid-connect-server/www:/opt/qewd/www -v ~/qewd-courier/oidc_provider/settings:/opt/qewd/mapped/settings -v ~/qewd-courier/yottadb/oidc_provider:/root/.yottadb/r1.22_x86_64/g rtweed/qewd-server
 
