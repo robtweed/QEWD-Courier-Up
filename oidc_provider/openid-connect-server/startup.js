@@ -86,32 +86,6 @@ function onStarted() {
     });
   }
 
-  // set up timed event to dump out documents to a text file
-
-  var self = this;
-  this.dumpDocumentsTimer = setInterval(function() {
-    var msg = {
-      type: 'ewd-dump-documents',
-      params: {
-        rootPath: __dirname,
-        fileName: 'documents.bak',
-        password: self.userDefined.config.managementPassword
-      }
-    };
-    console.log('Saving QEWD Database to documents.bak');
-    self.handleMessage(msg, function(response) {
-      console.log('QEWD Database saved');
-    });
-
-  }, 60000);
-
-  this.on('stop', function() {
-    console.log('Stopping dumpDocumentsTimer');
-    clearInterval(self.dumpDocumentsTimer);
-  });
-
-
-  var deleteDocuments = (config.delete_documents === true);
   console.log('Wait a couple of seconds for oidc-provider to be available');
   setTimeout(function() {
     var oidcServer = require('qewd-openid-connect');
